@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import Button from "../../components/button/Button";
 import "./HomeStyle";
+import Form from '../../pages/form/Form'
 export default function Home() {
+  const [data, setData] = useState(false)
+ 
   return (
     <div>
+   
       <h1 style={{ textAlign: "center", marginTop: "20px" }}>Employee List</h1>
       <Button
         text="Add Employee"
@@ -15,7 +19,12 @@ export default function Home() {
         marginLeft="100px"
         padding="5px 15px"
         size="20px"
+        onClick={()=>callBack(true)}
       />
+       {
+         data?
+         <Form /> : null
+       }
       <div
         className="container-fluid "
         style={{ marginTop: "100px", width: "90%" }}

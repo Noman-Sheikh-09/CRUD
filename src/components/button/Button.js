@@ -13,8 +13,8 @@ export default function Button(props) {
           marginLeft: props.marginLeft,
           padding: props.padding,
           fontSize: props.size,
-          
         }}
+  onClick={()=>props.callBack()}
       >
         {props.text}
       </button>
